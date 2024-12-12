@@ -1,0 +1,291 @@
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master
+$ git init
+Initialized empty Git repository in C:/Users/Administrator/Desktop/GIT/GIT_pony-
+club-tp-master/.git/
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        README.md
+        css/
+        github-git-cheat-sheet.pdf
+        img/
+        index.html
+        ressources/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git add .
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the nex
+t time Git touches it
+warning: in the working copy of 'css/default.css', LF will be replaced by CRLF t
+he next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the ne
+xt time Git touches it
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   README.md
+        new file:   css/default.css
+        new file:   github-git-cheat-sheet.pdf
+        new file:   img/applejack.jpg
+        new file:   index.html
+        new file:   ressources/fluttershy.png
+        new file:   ressources/pinkiepie.png
+        new file:   ressources/rainbowdash.png
+
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git commit -m 'Init projet Pony-Club'
+[master (root-commit) c71a154] Init projet Pony-Club
+ 9 files changed, 252 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 css/default.css
+ create mode 100644 github-git-cheat-sheet.pdf
+ create mode 100644 img/applejack.jpg
+ create mode 100644 index.html
+ create mode 100644 ressources/fluttershy.png
+ create mode 100644 ressources/pinkiepie.png
+ create mode 100644 ressources/rainbowdash.png
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git diff
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the ne
+xt time Git touches it
+diff --git a/index.html b/index.html
+index 450de39..e109d61 100644
+--- a/index.html
++++ b/index.html
+@@ -13,6 +13,10 @@
+                         <img src="img/applejack.jpg">
+                         <figcaption>Apple Jack</figcaption>
+                     </figure>
++                    <figure>
++                        <img src="ressources/rainbowdash.png">
++                        <figcaption>Little Pony Rainbow Dash</figcaption>
++                    </figure>
+                 </li>
+             </ul>
+             <div class="clearfix"></div>
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git add index.html
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the ne
+xt time Git touches it
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git commit -m 'Ajout Rainbow Dash'
+[master c3d254c] Ajout Rainbow Dash
+ 1 file changed, 4 insertions(+)
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git log
+commit c3d254c6ef6b3182c9ddccbbccb5ed302af344d1 (HEAD -> master)
+Author: Asolus <asolus@bluewin.ch>
+Date:   Thu Dec 12 15:06:38 2024 +0100
+
+    Ajout Rainbow Dash
+
+commit c71a15422676bc50569a614410eaedb5da795dd5
+Author: Asolus <asolus@bluewin.ch>
+Date:   Thu Dec 12 14:56:43 2024 +0100
+
+    Init projet Pony-Club
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git branch
+* master
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git branch --help
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git branch "Ma_branche"
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git checkout "Ma_branche"
+Switched to branch 'Ma_branche'
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (Ma_branche)
+$ git branch
+* Ma_branche
+  master
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (Ma_branche)
+$ git status
+On branch Ma_branche
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        img/fluttershy.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (Ma_branche)
+$ git add index.html img/fluttershy.png
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the ne
+xt time Git touches it
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (Ma_branche)
+$ git status
+On branch Ma_branche
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   img/fluttershy.png
+        modified:   index.html
+
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (Ma_branche)
+$ git commit -m 'Ajout Fluttershy'
+[Ma_branche aaefc07] Ajout Fluttershy
+ 2 files changed, 4 insertions(+)
+ create mode 100644 img/fluttershy.png
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (Ma_branche)
+$ git status
+On branch Ma_branche
+nothing to commit, working tree clean
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (Ma_branche)
+$ git status
+On branch Ma_branche
+nothing to commit, working tree clean
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (Ma_branche)
+$ git add index.html img/                    <figure>
+                        <img src="img/fluttershy.png">
+                        <figcaption>Fluttershy</figcaption>
+                    </figure>
+^C
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (Ma_branche)
+$ git add index.html img/pinkiepie.png
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the ne
+xt time Git touches it
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (Ma_branche)
+$ git commit -m 'Ajout Pinkiepie'
+[Ma_branche 1c9e1ec] Ajout Pinkiepie
+ 2 files changed, 4 insertions(+)
+ create mode 100644 img/pinkiepie.png
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (Ma_branche)
+$ git checkout master
+Switched to branch 'master'
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git diff
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ gif diff master Ma_branche
+bash: gif: command not found
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git diff master Ma_branche
+diff --git a/img/fluttershy.png b/img/fluttershy.png
+new file mode 100644
+index 0000000..48178c4
+Binary files /dev/null and b/img/fluttershy.png differ
+diff --git a/img/pinkiepie.png b/img/pinkiepie.png
+new file mode 100644
+index 0000000..6f60279
+Binary files /dev/null and b/img/pinkiepie.png differ
+diff --git a/index.html b/index.html
+index e109d61..65f5224 100644
+--- a/index.html
++++ b/index.html
+@@ -17,6 +17,14 @@
+                         <img src="ressources/rainbowdash.png">
+                         <figcaption>Little Pony Rainbow Dash</figcaption>
+                     </figure>
++                    <figure>
++                        <img src="img/fluttershy.png">
++                        <figcaption>Fluttershy</figcaption>
++                    </figure>
++                    <figure>
++                        <img src="img/pinkiepie.png">
++                        <figcaption>Pinkiepie</figcaption>
++                    </figure>
+                 </li>
+             </ul>
+             <div class="clearfix"></div>
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+Merge branch 'Ma_branche'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Auto-merging index.html
+Merge made by the 'ort' strategy.
+ img/fluttershy.png | Bin 0 -> 56894 bytes
+ img/pinkiepie.png  | Bin 0 -> 69530 bytes
+ index.html         |   8 ++++++++
+ 3 files changed, 8 insertions(+)
+ create mode 100644 img/fluttershy.png
+ create mode 100644 img/pinkiepie.png
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$ git branch -d Ma_branche
+Deleted branch Ma_branche (was 1c9e1ec).
+
+Administrator@KR07-07 MINGW64 ~/Desktop/GIT/GIT_pony-club-tp-master (master)
+$
